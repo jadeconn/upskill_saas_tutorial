@@ -38,14 +38,8 @@
             
           <!-- Navbar links -->
           <ul class="nav navbar-nav navbar-right">
-            <% if user_signed_in? %>
-              <li><%= link_to "About", about_path %></li>
-              <li><%= link_to "Contact Us", new_contact_path %></li>
-            <% else %>
-              <li><%= link_to "About", about_path %></li>
-              <li><%= link_to "Sign Up", new_user_registration_path %></li>
-              <li><%= link_to "Contact Us", new_contact_path %></li>
-            <% end %>
+            <li><%= link_to "About", about_path %></li>
+            <li><%= link_to "Contact Us", new_contact_path %></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
