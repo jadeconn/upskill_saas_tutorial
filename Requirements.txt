@@ -3,3 +3,14 @@ Memberships
 * User should see link for Pro plan on home page
 * Basic plan link should point to regular Devise sign up form
 * Pro plan link should point to a custom sign up form
+
+ActiveRecord: the "M" (Model) of MVC (Model View Controller)
+
+Parameters
+Parameters are stored in the "C" (Controller) portion of MVC
+Query String Parameters: anything found in the URL after the "?"
+
+Substitution
+Being able to mentally subsitute different way of saying things. 
+For example, seeing the @instance_variable and being able to mentally
+substitute the equivalent from the Controller.
