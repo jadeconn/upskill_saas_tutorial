@@ -4,6 +4,18 @@ Memberships
 * Basic plan link should point to regular Devise sign up form
 * Pro plan link should point to a custom sign up form
 
+Stripe Integration
+* Users should have a Stripe customer token in the users table
+* Javascript should prevent Pro form from submitting after user completes,
+and should send card info to Stripe.  Stripe will return with  card token.
+* Javascript should send user fields + card token to our Rails app. Rails app
+should validate the user fields.  Rails app will note whether plan 1 or 2.
+* Once validated, Rails should send user info (email, plan id) and card token
+to Stripe server and Stripe will create a subscription and send back 
+customer token. Rails should save customer token and user info to our db.
+
+GENERAL NOTES:
+
 ActiveRecord: the "M" (Model) of MVC (Model View Controller)
 
 Parameters
