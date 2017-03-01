@@ -1,7 +1,8 @@
 /* global $, Stripe */
 //Document Ready.
+
 $(document).on('turbolinks:load', function(){
-  var theForm = $('#pro-form');
+  var theForm = $('#pro_form');
   var submitBtn = $('#form-signup-btn');
   
   //Set Stripe public key.
@@ -12,6 +13,8 @@ $(document).on('turbolinks:load', function(){
     //prevent default submission behavior.
     event.preventDefault();
     submitBtn.val("Processing").prop('disabled', true);
+    
+    debugger;
     
     //Collect all the cc fields.
     var ccNum = $('#card_number').val(),
@@ -59,13 +62,14 @@ $(document).on('turbolinks:load', function(){
     
   //Stripe returns back card token.
   function stripeResponseHandler(status, response) {
+ 
     // Get token from Stripe response
     var token = response.id;
   
-  //Inject token as a hidden field into form.
-  theForm.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token) );
+    //Inject token as a hidden field into form.
+    theForm.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token) );
   
-  //Submit the form to our Rails app
-  theForm.get(0).submit();
+    //Submit the form to our Rails app
+    theForm.get(0).submit();
   }
 });
