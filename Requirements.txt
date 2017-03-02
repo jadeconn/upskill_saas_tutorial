@@ -14,6 +14,28 @@ should validate the user fields.  Rails app will note whether plan 1 or 2.
 to Stripe server and Stripe will create a subscription and send back 
 customer token. Rails should save customer token and user info to our db.
 
+User Profiles
+* Each user should have one profile.
+* Each user should see a link to new profile form upon signing up
+* User should be able to create and view their user profile
+* User profile should have a profile picture
+* Users should be able to view all user profiles
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 GENERAL NOTES:
 
 ActiveRecord: the "M" (Model) of MVC (Model View Controller)
@@ -26,3 +48,6 @@ Substitution
 Being able to mentally subsitute different way of saying things. 
 For example, seeing the @instance_variable and being able to mentally
 substitute the equivalent from the Controller.
+
+CRUD: Create, Read, Update, Delete
+HTTP: HyperText Transfer Protocol
